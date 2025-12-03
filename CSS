@@ -1,0 +1,205 @@
+/* --- Global Styles & Reset --- */
+:root {
+    --color-primary: #D2B4DE; /* Light Lavender/Pastel Purple */
+    --color-secondary: #F0E6E6; /* Very light Pink/Off-white */
+    --color-text-dark: #333333;
+    --color-text-light: #666666;
+    --color-accent: #A52A2A; /* Subtle antique brown/red for contrast */
+    --font-serif: 'Georgia', serif;
+    --font-sans: 'Arial', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-sans);
+    color: var(--color-text-dark);
+    line-height: 1.6;
+    background-color: var(--color-secondary);
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-text-dark);
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: var(--color-accent);
+}
+
+/* --- Header & Navigation --- */
+.main-header {
+    background-color: white;
+    padding: 20px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.logo {
+    font-family: var(--font-serif);
+    font-size: 1.8em;
+    font-weight: bold;
+    color: var(--color-primary);
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+}
+
+.main-nav li {
+    margin-left: 25px;
+}
+
+.main-nav a {
+    font-weight: 500;
+}
+
+/* --- Section Styling --- */
+.content-section {
+    padding: 80px 5%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h1 {
+    font-family: var(--font-serif);
+    font-size: 3em;
+    margin-bottom: 20px;
+    color: var(--color-accent);
+}
+
+h2 {
+    font-family: var(--font-serif);
+    font-size: 2.2em;
+    text-align: center;
+    margin-bottom: 40px;
+    color: var(--color-text-dark);
+}
+
+h3 {
+    font-family: var(--font-serif);
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: var(--color-primary);
+}
+
+/* --- 1. Hero Section --- */
+.hero-section {
+    background: url('https://via.placeholder.com/1400x500?text=Elegant+Vintage+Jewelry+Background') center/cover no-repeat;
+    color: white; /* Text color over background image */
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    padding: 100px 5%;
+    text-align: center;
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-content {
+    background-color: rgba(255, 255, 255, 0.2); /* Semi-transparent overlay */
+    padding: 30px;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: var(--color-primary);
+    color: white;
+    padding: 12px 30px;
+    border-radius: 5px;
+    margin-top: 20px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.cta-button:hover {
+    background-color: var(--color-accent);
+    color: white;
+}
+
+/* --- 2. Story Section --- */
+.about-us {
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+.story-layout {
+    display: flex;
+    gap: 50px;
+    align-items: center;
+}
+
+.story-image img {
+    width: 100%;
+    max-width: 450px;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.story-text {
+    flex: 1;
+}
+
+/* --- Footer --- */
+.main-footer {
+    background-color: var(--color-primary);
+    color: white;
+    padding: 40px 5%;
+    font-size: 0.9em;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.copyright {
+    text-align: center;
+    padding-top: 20px;
+}
+
+/* --- Responsive Design (Mobile First) --- */
+@media (max-width: 768px) {
+    .main-header {
+        flex-direction: column;
+    }
+
+    .main-nav ul {
+        margin-top: 15px;
+    }
+
+    .main-nav li {
+        margin: 0 10px;
+    }
+
+    .story-layout {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .story-image {
+        margin-bottom: 20px;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+
+    .hero-section h1 {
+        font-size: 2.2em;
+    }
+}
